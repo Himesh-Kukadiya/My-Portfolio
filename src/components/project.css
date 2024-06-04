@@ -1,0 +1,38 @@
+.pro__img {
+    max-height: 200px;
+    max-width: 100%;
+}
+
+.pro__img > img {
+    height: auto;
+    width: 100%;
+    transform: translateY(0%);
+    transition: transform 5s ease-in-out 0s;
+}
+
+.pro__img {
+    background-color: hsla(0, 0%, 46%, 0.2);
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+    overflow: hidden;
+    width: 530px;
+}
+
+@media screen and (max-width: 651px) {
+    .pro__img:hover > img {
+        transform: translateY(-85%);
+        transition: transform 5s ease-in-out 0s;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .project {
+        width: 300px;
+    }
+    
+    .pro__img:hover > img {
+        transform: translateY(-81%);
+        transition: transform 5s ease-in-out 0s;
+    }
+}
