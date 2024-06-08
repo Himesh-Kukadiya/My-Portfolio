@@ -9,18 +9,18 @@ import {
     mongodb,
     express,
     git,
-    // figma,
+    css,
     csharp,
     aspnet,
     java,
     php,
     rku,
     mkbu,
-    // gshscb,
     crickzone,
     ecosystem,
     pts,
     mim,
+    fda
   } from "../assets";
   
   export const navLinks = [
@@ -48,7 +48,7 @@ import {
   
   const services = [
     {
-      title: "MERN Stack Developer",
+      title: "React Developer",
       icon: mobile,
     },
     {
@@ -102,14 +102,10 @@ import {
       name: "Tailwind CSS",
       icon: tailwind,
     },
-    // {
-    //   name: "Bootstrap",
-    //   icon: bootstrap,
-    // },
-    // {
-    //   name: "CSS 3",
-    //   icon: css,
-    // },
+    {
+      name: "CSS 3",
+      icon: css,
+    },
     {
       name: "HTML 5",
       icon: html,
@@ -125,7 +121,7 @@ import {
       date: "August 2023 - May 2025",
       points: [
         "The School of Engineering at RK University (RKU) offers an intensive Master of Computer Application program with an upgraded syllabus.",
-        "I have completed the first year of the two-year program with a 8.95 CGPA.",
+        "I have completed my half of the course with 8.95 CGPA.",
         "I have completed four projects during this course and gained a lot of experience in software development.",
         "I gained excellent knowledge of MERN stack development, ASP.NET, and Flutter through project-based learning.",
         "I have also learned OOP with Java, database concepts like SQL and PL/SQL using Oracle Apex, C#.NET, and full-stack development using HTML, CSS, JavaScript, and PHP.",
@@ -220,6 +216,26 @@ import {
       ],
       image: ecosystem,
       source_code_link: "https://github.com/Himesh-Kukadiya/Eco-Friendly-items-sealling-platform",
+    },
+    {
+      name: "Food Delivery Application",
+      description:"The flutter based food delivery aplication alows usrs to sign up, sign in, change pasword via email, see food list, chek food details, add to cart, remove from the cart, place order, add mony into walet, see and update profil. And it also alows Admin to login, see food list, add new food item, update and delete exsting food item.",
+      tags: [
+        {
+          name: "Flutter",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Mobile application",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "FireBase",
+          color: "blue-text-gradient",
+        },
+      ],
+      image: fda,
+      source_code_link: "https://github.com/Himesh-Kukadiya/food_delevery-fllutter-",
     },
     {
       name: "PTS's",

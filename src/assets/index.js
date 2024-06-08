@@ -29,6 +29,7 @@ import crickzone from "./projects/crickzone.png";
 import ecosystem from "./projects/ecosystem.png";
 import pts from "./projects/pts.png";
 import mim from "./projects/mim.png";
+import fda from './projects/fooddelivery.png';
 
 export {
   logo,
@@ -59,4 +60,5 @@ export {
   ecosystem,
   pts,
   mim,
+  fda,
 };

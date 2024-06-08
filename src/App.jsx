@@ -7,7 +7,7 @@ import {
   Tech,
   Project,
   Contact,
-  // // Feedbacks,
+  // Feedbacks,
   StarsCanvas,
 } from "./components";
 

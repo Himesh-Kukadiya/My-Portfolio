@@ -6,7 +6,7 @@ import { SectionWrapper } from "../HOC";
 import { projects } from "../constants";
 import { fadeIn } from "../utils/motion";
 import PropType from "prop-types"
-import "./project.css"
+// import "./project.css"
 
 const ProjectCard = ({
   index,
@@ -27,18 +27,20 @@ const ProjectCard = ({
         }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
-        <div className="relative w-full h-[230px] cursor-grab pro__img" onClick={() => {
-                // try {
-                //     window.open(project_url, '_blank');
-                // } catch (error) {
-                //     console.error('Failed to open link:', error);
-                // }
+        <div className="relative w-full h-[230px] cursor-none pro__img" onClick={() => {
+                try {
+                    window.open(source_code_link, '_blank');
+                } catch (error) {
+                    console.error('Failed to open link:', error);
+                }
             }}>
+              
           <img
             src={image}
             alt={name}
-            className="w-full h-full object-cover roundedd-2xl"
+            className="w-full h-full object-cover img_pro hover:bg-slate-100 rounded-2xl"
           />
+          <div className="icon-scroll"></div> {/* Add this line */}
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
               onClick={() => {
@@ -58,21 +60,21 @@ const ProjectCard = ({
             </div>
           </div>
         </div>
-
         <div className="mt-5">
-        <h3 className="text-white text-[24px] font-bold">{name}</h3>
-        <p className="mt-2 text-secondary text-[14px] text-justify">{description}</p>
+          <h3 className="text-white text-[24px] font-bold">{name}</h3>
+          <p className="mt-2 text-secondary text-[14px] text-justify">{description}</p>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
-        {tags.map((tag) => (
-          <p key={tag.name} className={`text-[14px] ${tag.color}`}>#{tag.name}</p>
-        ))}
+          {tags.map((tag) => (
+            <p key={tag.name} className={`text-[14px] ${tag.color}`}>#{tag.name}</p>
+          ))}
         </div>
       </Tilt>
     </motion.div>
   );
 };
+
 ProjectCard.propTypes ={
   index: PropType.number.isRequired,
   name: PropType.string.isRequired,
@@ -97,7 +99,7 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className="mt-20 flex flex-wrap justify-center gap-7">
+      <div className="mt-20 flex flex-wrap justify-center gap-5">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
@@ -106,4 +108,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "project");

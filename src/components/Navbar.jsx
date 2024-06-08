@@ -16,12 +16,12 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" width={80} className="object-contain" />
+          <img src={logo} alt="logo" width={50} className="object-contain" />
           <p className="text-white text-[18px] fontbold cursor-pointer">
             Himesh Kukadiya
           </p>
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul className="list-none hidden lg:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li key={link.id} 
             className={`${
@@ -34,7 +34,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="lg:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"
@@ -43,14 +43,14 @@ const Navbar = () => {
               setToggle(!toggle);
             }}
           />
-          <div className={`${!toggle ? "hidden" : "flex"} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[120px] z-10 rounded-xl`}>
+          <div className={`${!toggle ? "hidden" : "flex"} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[150px] z-10 rounded-xl`}>
           <ul className="list-none flex justify-end items-start flex-col gap-4">
           {navLinks.map((link) => (
             <li
               key={link.id}
               className={`${
                 active === link.title ? "text-white" : "text-secondary"
-              } font-poppins font-medium cursor-pointer text-[12px]`}
+              } font-poppins font-medium cursor-pointer text-[20px]`}
               onClick={() => {
                 setActive(link.title);
                 setToggle(!toggle);
